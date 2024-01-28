@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grayscale Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grayscale Image</h1>
+    <img src="data:image/png;base64,{{ image_data }}" alt="Grayscale Image" width="25%" height= "auto" align="centre">
+    <br>
+    <button align="centre">
+    <a href="{{ url_for('download_image') }}" download="grayscale_image.png">Click to Download</a>
+</button>
+</body>
+</html>

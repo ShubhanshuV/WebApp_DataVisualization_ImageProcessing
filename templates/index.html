@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts and Image</title>
+    
+    <style>
+        h1{
+            color:darkblue;
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Visualisation and Image Transformation</h1>
+    <p>This webpage performs 2 functions based on the input file.<br><ul style="list-style-type:square;">
+        <li>If the uploaded file is a csv file then a pie and bar chart will be created taking 1st column as category and 2nd column as value</li>
+        <li>If the uploaded file is an image file[.png/.jpg/.jpeg] then it will be converted to Grayscale and an option to download the file will be available</li>
+    </ul>
+</p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="fileInput">
+        <input type="submit" value="Upload file" id="uploadButton">
+    </form>
+    {% if message %}
+        <p class="error-message">{{ message }}</p>
+    {% endif %}
+
+
+</body>
+</html>
+
+
